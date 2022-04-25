@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
+
+    <!-- bootstrap & Css & animation -->
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animate.css">
+    <link  rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- for fontawesome -->
+    <script src="https://kit.fontawesome.com/39bd3d6313.js" crossorigin="anonymous"></script>
+
+    <link rel="icon" href="imgs/rubic.png">
+    <title> Rubic Game </title>
+  </head>
+  <body>
+    <!--
+     <div class="instructions d-flex flex-column py-2 px-4">
+        <p class="text-center fw-bold fs-2 text-white my-2">Rubic Game</p>
+        <div class="main-instruction">
+           <span class="text-white fw-bold fs-4 " > Instructions : </span>
+           <ul>
+             <li></li>
+             <li></li>
+             <li></li>
+             <li></li>
+           </ul>
+        </div>
+
+     </div>
+
+-->
+
+<div class="scene" id="scene">
+  <div class="pivot centered" id="pivot">
+   <div class="cube" id="cube">
+    <div class="center">
+      <div class="contianer ">
+
+
+         <div class="box">
+           <div class="d-flex flex-row">
+             <div class="right square square_1 ">  </div>
+             <div class="right square square_2">  </div>
+             <div class="right square square_3">  </div>
+           </div>
+           <div class="d-flex flex-row">
+             <div class="right square square_4">  </div>
+             <div class="right square square_5">  </div>
+             <div class="right square square_6">  </div>
+           </div>
+           <div class="d-flex flex-row">
+             <div class="right square square_7">  </div>
+             <div class="right square square_8">  </div>
+             <div class="right square square_9">  </div>
+           </div>
+         </div>
+
+
+         <div class="box">
+           <div class="d-flex flex-row">
+             <div class="head square square_10"></div>
+             <div class="head square square_11"></div>
+             <div class="head square square_12">
+                 <div class="btn-rotate-right btn-rotate"> </div>
+             </div>
+            </div>
+             <div class="d-flex flex-row">
+               <div class="head square square_13"></div>
+               <div class="head square square_14"></div>
+               <div class="head square square_15">
+                   <div class="btn-rotate-right btn-rotate"> </div>
+               </div>
+             </div>
+             <div class="d-flex flex-row">
+               <div class="head square square_16">
+                 <div class="btn-rotate btn-rotate-down">   </div>
+               </div>
+               <div class="head square square_17">
+                 <div class="btn-rotate btn-rotate-down">   </div>
+               </div>
+               <div class="head square square_18">
+                  <div class="btn-rotate-right btn-rotate">  </div>
+                  <div class="btn-rotate btn-rotate-down-9">   </div>
+               </div>
+             </div>
+         </div>
+
+
+         <div class="box">
+           <div class="d-flex flex-row">
+             <div class="left square square_19">
+               <div class="btn-rotate btn-rotate-left">   </div>
+             </div>
+             <div class="left square square_20">  </div>
+             <div class="left square square_21">  </div>
+           </div>
+           <div class="d-flex flex-row">
+             <div class="left square square_22">
+                <div class="btn-rotate btn-rotate-left">   </div>
+              </div>
+             <div class="left square square_23">   </div>
+             <div class="left square square_24">  </div>
+           </div>
+           <div class="d-flex flex-row">
+             <div class="left square square_25">
+               <div class="btn-rotate btn-rotate-left">   </div>
+               <div class="btn-rotate btn-rotate-down-7">   </div>
+             </div>
+             <div class="left square square_26">
+               <div class="btn-rotate btn-rotate-down">   </div>
+              </div>
+             <div class="left square square_27">
+               <div class="btn-rotate btn-rotate-down">   </div>
+             </div>
+           </div>
+         </div>
+
+
+         <div class="box">
+           <div class="d-flex flex-row">
+             <div class="bottom square square_28">  </div>
+             <div class="bottom square square_29">  </div>
+             <div class="bottom square square_30">  </div>
+           </div>
+           <div class="d-flex flex-row">
+             <div class="bottom square square_31">  </div>
+             <div class="bottom square square_32">  </div>
+             <div class="bottom square square_33">  </div>
+           </div>
+           <div class="d-flex flex-row">
+             <div class="bottom square square_34">  </div>
+             <div class="bottom square square_35">  </div>
+             <div class="bottom square square_36">  </div>
+           </div>
+         </div>
+
+
+         <div class="box">
+           <div class="d-flex flex-row">
+             <div class="top square square_37">
+               <div class="btn-rotate btn-rotate-left">   </div>
+              </div>
+             <div class="top square square_38">
+               <div class="btn-rotate btn-rotate-left">   </div>
+             </div>
+             <div class="top square square_39">
+               <div class="btn-rotate btn-rotate-up">   </div>
+               <div class="btn-rotate btn-rotate-left-3">   </div>
+             </div>
+           </div>
+           <div class="d-flex flex-row">
+             <div class="top square square_40">  </div>
+             <div class="top square square_41">  </div>
+             <div class="top square square_42">
+                <div class="btn-rotate btn-rotate-up">   </div>
+             </div>
+           </div>
+           <div class="d-flex flex-row">
+             <div class="top square square_43">  </div>
+             <div class="top square square_44">  </div>
+             <div class="top square square_45">
+               <div class="btn-rotate btn-rotate-up">   </div>
+              </div>
+           </div>
+         </div>
+
+
+
+         <div class="box">
+           <div class="d-flex flex-row">
+             <div class="back square square_46">  </div>
+             <div class="back square square_47">  </div>
+             <div class="back square square_48">  </div>
+           </div>
+           <div class="d-flex flex-row">
+             <div class="back square square_49">  </div>
+             <div class="back square square_50">  </div>
+             <div class="back square square_51">  </div>
+           </div>
+           <div class="d-flex flex-row">
+             <div class="back square square_52">  </div>
+             <div class="back square square_53">  </div>
+             <div class="back square square_54">  </div>
+           </div>
+         </div>
+
+      </div>
+    </div>
+
+
+     <!--
+    <div class="piece">
+     <div class="element left"></div>
+     <div class="element right"></div>
+     <div class="element top"></div>
+     <div class="element bottom"></div>
+     <div class="element back"></div>
+     <div class="element front"></div>
+    </div>
+    <div class="piece">
+     <div class="element left"></div>
+     <div class="element right"></div>
+     <div class="element top"></div>
+     <div class="element bottom"></div>
+     <div class="element back"></div>
+     <div class="element front"></div>
+    </div>
+    <div class="piece">
+     <div class="element left"></div>
+     <div class="element right"></div>
+     <div class="element top"></div>
+     <div class="element bottom"></div>
+     <div class="element back"></div>
+     <div class="element front"></div>
+    </div>
+    <div class="piece">
+     <div class="element left"></div>
+     <div class="element right"></div>
+     <div class="element top"></div>
+     <div class="element bottom"></div>
+     <div class="element back"></div>
+     <div class="element front"></div>
+    </div>
+    <div class="piece">
+     <div class="element left"></div>
+     <div class="element right"></div>
+     <div class="element top"></div>
+     <div class="element bottom"></div>
+     <div class="element back"></div>
+     <div class="element front"></div>
+    </div>
+    <div class="piece">
+     <div class="element left"></div>
+     <div class="element right"></div>
+     <div class="element top"></div>
+     <div class="element bottom"></div>
+     <div class="element back"></div>
+     <div class="element front"></div>
+    </div>
+    <div class="piece">
+     <div class="element left"></div>
+     <div class="element right"></div>
+     <div class="element top"></div>
+     <div class="element bottom"></div>
+     <div class="element back"></div>
+     <div class="element front"></div>
+    </div>
+    <div class="piece">
+     <div class="element left"></div>
+     <div class="element right"></div>
+     <div class="element top"></div>
+     <div class="element bottom"></div>
+     <div class="element back"></div>
+     <div class="element front"></div>
+    </div>
+    <div class="piece">
+     <div class="element left"></div>
+     <div class="element right"></div>
+     <div class="element top"></div>
+     <div class="element bottom"></div>
+     <div class="element back"></div>
+     <div class="element front"></div>
+    </div>
+    <div class="piece">
+     <div class="element left"></div>
+     <div class="element right"></div>
+     <div class="element top"></div>
+     <div class="element bottom"></div>
+     <div class="element back"></div>
+     <div class="element front"></div>
+    </div>
+    <div class="piece">
+     <div class="element left"></div>
+     <div class="element right"></div>
+     <div class="element top"></div>
+     <div class="element bottom"></div>
+     <div class="element back"></div>
+     <div class="element front"></div>
+    </div>
+    <div class="piece">
+     <div class="element left"></div>
+     <div class="element right"></div>
+     <div class="element top"></div>
+     <div class="element bottom"></div>
+     <div class="element back"></div>
+     <div class="element front"></div>
+    </div>
+    <div class="piece">
+     <div class="element left"></div>
+     <div class="element right"></div>
+     <div class="element top"></div>
+     <div class="element bottom"></div>
+     <div class="element back"></div>
+     <div class="element front"></div>
+    </div>
+    <div class="piece">
+     <div class="element left"></div>
+     <div class="element right"></div>
+     <div class="element top"></div>
+     <div class="element bottom"></div>
+     <div class="element back"></div>
+     <div class="element front"></div>
+    </div>
+    <div class="piece">
+     <div class="element left"></div>
+     <div class="element right"></div>
+     <div class="element top"></div>
+     <div class="element bottom"></div>
+     <div class="element back"></div>
+     <div class="element front"></div>
+    </div>
+    <div class="piece">
+     <div class="element left"></div>
+     <div class="element right"></div>
+     <div class="element top"></div>
+     <div class="element bottom"></div>
+     <div class="element back"></div>
+     <div class="element front"></div>
+    </div>
+    <div class="piece">
+     <div class="element left"></div>
+     <div class="element right"></div>
+     <div class="element top"></div>
+     <div class="element bottom"></div>
+     <div class="element back"></div>
+     <div class="element front"></div>
+    </div>
+    <div class="piece">
+     <div class="element left"></div>
+     <div class="element right"></div>
+     <div class="element top"></div>
+     <div class="element bottom"></div>
+     <div class="element back"></div>
+     <div class="element front"></div>
+    </div>
+    <div class="piece">
+     <div class="element left"></div>
+     <div class="element right"></div>
+     <div class="element top"></div>
+     <div class="element bottom"></div>
+     <div class="element back"></div>
+     <div class="element front"></div>
+    </div>
+    <div class="piece">
+     <div class="element left"></div>
+     <div class="element right"></div>
+     <div class="element top"></div>
+     <div class="element bottom"></div>
+     <div class="element back"></div>
+     <div class="element front"></div>
+    </div>
+    <div class="piece">
+     <div class="element left"></div>
+     <div class="element right"></div>
+     <div class="element top"></div>
+     <div class="element bottom"></div>
+     <div class="element back"></div>
+     <div class="element front"></div>
+    </div>
+    <div class="piece">
+     <div class="element left"></div>
+     <div class="element right"></div>
+     <div class="element top"></div>
+     <div class="element bottom"></div>
+     <div class="element back"></div>
+     <div class="element front"></div>
+    </div>
+    <div class="piece">
+     <div class="element left"></div>
+     <div class="element right"></div>
+     <div class="element top"></div>
+     <div class="element bottom"></div>
+     <div class="element back"></div>
+     <div class="element front"></div>
+    </div>
+    <div class="piece">
+     <div class="element left"></div>
+     <div class="element right"></div>
+     <div class="element top"></div>
+     <div class="element bottom"></div>
+     <div class="element back"></div>
+     <div class="element front"></div>
+    </div>
+    <div class="piece">
+     <div class="element left"></div>
+     <div class="element right"></div>
+     <div class="element top"></div>
+     <div class="element bottom"></div>
+     <div class="element back"></div>
+     <div class="element front"></div>
+    </div>
+    <div class="piece">
+     <div class="element left"></div>
+     <div class="element right"></div>
+     <div class="element top"></div>
+     <div class="element bottom"></div>
+     <div class="element back"></div>
+     <div class="element front"></div>
+    </div>
+  -->
+   </div>
+  </div>
+ </div>
+ <div id="guide">
+  <div class="anchor" id="anchor3" style="transform: translateZ(3px) translateY(-33.33%) rotate(-270deg) translateY(66.67%);"></div>
+  <div class="anchor" id="anchor2" style="transform: translateZ(3px) translateY(-33.33%) rotate(-180deg) translateY(66.67%)"></div>
+  <div class="anchor" id="anchor1" style="transform: translateZ(3px) translateY(-33.33%) rotate(-90deg) translateY(66.67%)"></div>
+  <div class="anchor" id="anchor0" style="transform: translateZ(3px) translateY(-33.33%) rotate(0deg) translateY(66.67%)"></div>
+ </div>
+
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- for flatpickr -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script> -->
+    <script src="js/wow.min.js"></script>
+    <script>
+    new WOW().init();
+    </script>
+  </body>
+</html>
